@@ -7,7 +7,7 @@ export default function AboutMe() {
         id="hero"
         className="flex flex-col justify-center w-full max-w-7xl h-[600px]"
       >
-        <h1 className="text-5xl leading-16 font-bold">
+        <h1 className="text-5xl leading-12 font-medium ">
           Olá,
           <br />
           Sou Philip Greiner.
@@ -20,7 +20,7 @@ export default function AboutMe() {
         <Link
           href="./pdfs/resume.pdf"
           target="_blank"
-          className="inline w-fit font-bold text-white mt-5 bg-[var(--primary-color)] "
+          className="text-[18px] w-fit font-medium text-white mt-5 bg-[var(--primary-color)] "
         >
           {"Currículo (PDF)."}
         </Link>
