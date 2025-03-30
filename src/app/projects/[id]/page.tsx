@@ -2,13 +2,9 @@ import Image from "next/image";
 import { projects } from "@/app/data/projects";
 import { notFound } from "next/navigation";
 
-export default async function ProjectPage({
-  params,
-}: {
-  params: { id: string };
-}) {
-  const awaitedParams = await Promise.resolve(params);
-  const id = awaitedParams.id;
+type Params = Promise<{ id: string }>;
+export default async function ProjectPage({ params }: { params: Params }) {
+  const { id } = await params;
   const project = projects.find((p) => p.id === parseInt(id));
 
   if (!project) {
