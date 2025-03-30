@@ -20,7 +20,7 @@ export default function RootLayout({
       <body
         className={`${jost.className}  antialiased flex flex-col items-center `}
       >
-        <nav className="absolute top-20 w-full max-w-7xl">
+        <nav className="absolute w-full top-20 max-w-7xl">
           <Nav />
         </nav>
         {children}

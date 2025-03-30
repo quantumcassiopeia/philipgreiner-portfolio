@@ -24,8 +24,8 @@ export default async function ProjectPage({
         />
       </div>
       <article className="flex flex-col items-center mt-[700px] w-screen px-7 bg-white">
-        <section className="w-full max-w-[980px] py-24 text-[18px] font-medium text-gray-950">
-          <h1 className="tracking-widest text-4xl leading-12">
+        <section className="w-full max-w-[980px] py-24 text-[18px] font-medium text-[var(--text-color)]">
+          <h1 className="text-4xl tracking-widest leading-12">
             {project.title.toUpperCase()}
           </h1>
           <h2>{project.category.join(" | ")}</h2>
