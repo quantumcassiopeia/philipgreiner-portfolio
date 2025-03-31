@@ -19,6 +19,10 @@ export default function ProjectPage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const currentIndex = projects.findIndex((p) => p.id === projectId);
+  const nextProject = projects[currentIndex + 1];
+  const prevProject = projects[currentIndex - 1];
+
   if (!project) {
     return notFound();
   }
@@ -63,14 +67,26 @@ export default function ProjectPage() {
             />
           ))}
         </section>
-        <section className="flex items-center justify-between h-[5rem] w-full max-w-[980px]">
-          <span>*</span>
-          <Link href="/" className="text-[18px] font-medium">
+        <section className="flex items-center h-[5rem] w-full max-w-[980px] text-[18px] font-medium">
+          {prevProject && (
+            <Link
+              className="material-symbols-outlined"
+              href={`/projects/${prevProject.id}`}
+            >
+              arrow_back
+            </Link>
+          )}
+          <Link className="mx-auto" href="/">
             Ver todos os projetos
           </Link>
-          <Link href="/" className="material-symbols-outlined">
-            arrow_forward
-          </Link>
+          {nextProject && (
+            <Link
+              className="material-symbols-outlined"
+              href={`/projects/${nextProject.id}`}
+            >
+              arrow_forward
+            </Link>
+          )}
         </section>
       </article>
     </main>
