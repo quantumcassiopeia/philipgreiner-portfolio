@@ -1,12 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import { projects } from "@/app/data/projects";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 
-type Params = Promise<{ id: string }>;
-export default async function ProjectPage({ params }: { params: Params }) {
-  const { id } = await params;
-  const project = projects.find((p) => p.id === parseInt(id));
+export default function ProjectPage() {
+  const { id } = useParams();
+  const projectId = parseInt(id as string);
+  const project = projects.find((project) => project.id === projectId);
 
   if (!project) {
     return notFound();
