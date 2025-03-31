@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${jost.className}  antialiased flex flex-col items-center `}
+        className={`${jost.className}  antialiased flex flex-col items-center overflow-x-hidden `}
       >
         <nav className="absolute w-full top-20 max-w-7xl">
           <Nav />

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { projects } from "@/app/data/projects";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 type Params = Promise<{ id: string }>;
 export default async function ProjectPage({ params }: { params: Params }) {
@@ -12,7 +13,7 @@ export default async function ProjectPage({ params }: { params: Params }) {
   }
 
   return (
-    <main className="flex flex-col items-center min-h-svh">
+    <main className="flex flex-col items-center ">
       <div className="fixed inset-0 -z-10">
         <Image
           src={project.projectCover}
@@ -36,7 +37,27 @@ export default async function ProjectPage({ params }: { params: Params }) {
             {project.description}
           </p>
         </section>
-        <section></section>
+        <section className="flex flex-col gap-16">
+          {project.images?.map((image, index) => (
+            <Image
+              key={index}
+              src={image}
+              width={980}
+              height={512}
+              alt={project.title}
+              className="object-cover"
+            />
+          ))}
+        </section>
+        <section className="flex items-center justify-between h-[5rem] w-full max-w-[980px]">
+          <span>*</span>
+          <Link href="/" className="text-[18px] font-medium">
+            Ver todos os projetos
+          </Link>
+          <Link href="/" className="material-symbols-outlined">
+            arrow_forward
+          </Link>
+        </section>
       </article>
     </main>
   );

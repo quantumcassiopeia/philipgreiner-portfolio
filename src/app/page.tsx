@@ -17,10 +17,9 @@ export default function Home() {
         </p>
       </section>
       <section className="flex flex-wrap items-center justify-center gap-7 w-full max-w-[1920px]">
-        <ProjectCard project={projects[0]} />
-        <ProjectCard project={projects[0]} />
-        <ProjectCard project={projects[0]} />
-        <ProjectCard project={projects[0]} />
+        {projects.map((project) => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
       </section>
     </main>
   );
