@@ -1,23 +1,34 @@
 "use client";
 
 import Image from "next/image";
-import { projects } from "@/app/data/projects";
-import { notFound } from "next/navigation";
+import { notFound, useParams } from "next/navigation";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+
+import { projects } from "@/app/data/projects";
+import { useEffect, useState } from "react";
 
 export default function ProjectPage() {
-  const { id } = useParams();
-  const projectId = parseInt(id as string);
+  const projectId = parseInt(useParams().id as string);
   const project = projects.find((project) => project.id === projectId);
+
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY * -0.5);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   if (!project) {
     return notFound();
   }
 
   return (
-    <main className="flex flex-col items-center ">
-      <div className="fixed inset-0 -z-10">
+    <main className="flex flex-col items-center">
+      <div
+        className="fixed inset-0 -z-10"
+        style={{ transform: `translateY(${scrollY}px)` }}
+      >
         <Image
           src={project.projectCover}
           fill
