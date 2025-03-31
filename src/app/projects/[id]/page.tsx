@@ -26,11 +26,11 @@ export default function ProjectPage() {
   return (
     <main className="flex flex-col items-center">
       <div
-        className="fixed inset-0 -z-10"
+        className="fixed inset-0 h-screen -z-10"
         style={{ transform: `translateY(${scrollY}px)` }}
       >
         <Image
-          src={project.projectCover}
+          src={project.cover}
           fill
           alt={project.title}
           className="object-cover"

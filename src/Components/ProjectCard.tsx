@@ -10,7 +10,7 @@ export default function ProjectCard({ project }: { project: Project }) {
     >
       <div className="w-full h-full group:hover:scale-105 ">
         <Image
-          src={project.cardCover}
+          src={project.cover}
           alt={project.title}
           fill
           className="object-cover"

@@ -4,16 +4,14 @@ export interface Project {
   category: string[];
   coauthors?: string[];
   description: string;
-  cardCover: string;
-  projectCover: string;
+  cover: string;
   images: string[];
   link: string;
 }
 
 const generateProjectPath = (id: number) => ({
   id: id,
-  cardCover: `/projects/${id}/cardCover.avif`,
-  projectCover: `/projects/${id}/projectCover.avif`,
+  cover: `/projects/${id}/cover.avif`,
   link: `/projects/${id}`,
 });
 
@@ -32,18 +30,15 @@ export const projects: Project[] = [
     ...generateProjectPath(1),
   },
   {
-    id: 2,
     title: "Satyricon",
     category: ["Projeto Gráfico", "Editorial"],
     description:
       "Projeto gráfico para uma edição comemorativa de aniversário do livro Satyricon, uma obra da literatura latina de autoria do prosador romano Petrônio, escrita durante o ano 60 D.C. O projeto gráfico tem como base o arranjo tipográfico que faz alusão aos episódios frenéticos e caricatos narrados ao longo do livro.",
-    cardCover: "/projects/2/projectCover.avif",
-    projectCover: "/projects/2/projectCover.avif",
     images: [
       "/projects/1/image1.avif",
       "/projects/1/image2.avif",
       "/projects/1/image3.avif",
     ],
-    link: "/projects/2",
+    ...generateProjectPath(2),
   },
 ];
