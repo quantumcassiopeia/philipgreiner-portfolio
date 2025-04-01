@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "@/Components/Nav";
 import { Jost } from "next/font/google";
+import BackToTop from "@/Components/BacktoTop";
 
 const jost = Jost({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
           <Nav />
         </nav>
         {children}
+        <BackToTop />
       </body>
     </html>
   );

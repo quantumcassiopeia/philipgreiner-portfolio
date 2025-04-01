@@ -5,10 +5,14 @@ import Image from "next/image";
 export default function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
+      style={{
+        boxShadow:
+          "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
+      }}
       href={project.link}
       className="relative group w-full max-w-[22rem] sm:max-w-[35rem] aspect-[3/4]"
     >
-      <div className="w-full h-full group:hover:scale-105 ">
+      <div className="w-full h-full">
         <Image
           src={project.cover}
           alt={project.title}

@@ -1,4 +1,5 @@
 # Portfolio - Philip Greiner
+
 https://philipgreiner-portfolio.vercel.app/
 
 This is the portfolio of designer Philip Greiner, developed with Next.js and Tailwind CSS. The site features a homepage and several cards showcasing the designer's past projects.
@@ -62,27 +63,7 @@ This is the portfolio of designer Philip Greiner, developed with Next.js and Tai
     │       ├── image1.avif
     │       ├── image2.avif
     │       └── image3.avif
-    │   ├── 2
-    │       ├── cover.avif
-    │       ├── image1.avif
-    │       ├── image2.avif
-    │       └── image3.avif
-    │   ├── 3
-    │       └── cover.avif
-    │   ├── 4
-    │       └── cover.avif
-    │   ├── 5
-    │       └── cover.avif
-    │   ├── 6
-    │       └── cover.avif
-    │   ├── 7
-    │       └── cover.avif
-    │   ├── 8
-    │       └── cover.avif
-    │   ├── 9
-    │       └── cover.avif
-    │   └── 10
-    │       └── cover.avif
+    │   ├── ...
 ├── src
     ├── Components
     │   ├── Nav.tsx

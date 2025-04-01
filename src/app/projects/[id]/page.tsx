@@ -68,7 +68,7 @@ export default function ProjectPage() {
             />
           ))}
         </section>
-        <section className="flex items-center h-[5rem] w-full max-w-[980px] text-[18px] font-medium">
+        <section className="flex items-center mt-10 h-[5rem] w-full max-w-[980px] text-[18px] font-medium">
           {prevProject && (
             <Link
               className="material-symbols-outlined"
