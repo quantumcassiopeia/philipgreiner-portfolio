@@ -42,7 +42,7 @@ export default function ProjectPage() {
           priority
         />
       </div>
-      <article className="flex flex-col items-center mt-[700px] w-screen px-7 bg-white">
+      <article className="flex flex-col items-center mt-[900px] w-screen px-7 bg-white">
         <section className="w-full max-w-[980px] py-24 text-[18px] font-medium text-[var(--text-color)]">
           <h1 className="text-4xl tracking-widest leading-12">
             {project.title.toUpperCase()}
