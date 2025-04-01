@@ -38,6 +38,8 @@ export default function ProjectPage() {
           fill
           alt={project.title}
           className="object-cover"
+          quality={100}
+          priority
         />
       </div>
       <article className="flex flex-col items-center mt-[700px] w-screen px-7 bg-white">
