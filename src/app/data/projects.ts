@@ -90,4 +90,75 @@ export const projects: Project[] = [
     ],
     ...generateProjectPath(6),
   },
+  {
+    title: "Baralho Lenormand",
+    category: ["Ilustração"],
+    description:
+      "A série de ilustrações foi desenvolvida unicamente em aquarela para um projeto de cartas de baralho lenormand, foram usadas como referências imagens icônicas da cultura francesa do século XVII, época em que o baralho foi criado.",
+    images: [
+      "/projects/1/image1.avif",
+      "/projects/1/image2.avif",
+      "/projects/1/image3.avif",
+    ],
+    ...generateProjectPath(7),
+  },
+  {
+    title: "Views",
+    category: ["Identidade Visual"],
+    description:
+      "O projeto de identidade visual foi desenvolvido para um evento sobre cibercultura onde ocorreriam palestras, oficinas e debates sendo transmitidos simultaneamente. Cartaz, catálogo, ingresso e  página da web foram desenvolvidas.\n\n A tipografia utilizada no logotipo foi desenvolvida a partir de um grid modular, usando como referência a comunicação virtual, onde exitem pontos individuais que se intercomunicam através da rede",
+    images: [
+      "/projects/1/image1.avif",
+      "/projects/1/image2.avif",
+      "/projects/1/image3.avif",
+    ],
+    ...generateProjectPath(8),
+  },
+  {
+    title: "Ilustrações",
+    category: [""],
+    description:
+      "Ilustrações feitas em aquarela para o texto Ruínas Circulares, do Jorge Luis Borges",
+    images: [
+      "/projects/1/image1.avif",
+      "/projects/1/image2.avif",
+      "/projects/1/image3.avif",
+    ],
+    ...generateProjectPath(9),
+  },
+  {
+    title: "Uni",
+    category: ["Fotografia", "Fotocriação"],
+    description:
+      "Do que você é feito?  O que te define? Como o mundo te vê? Uni vem para responder e questionar isso. Como nós, seres tão complexos, podemos nos definir? Em um mundo cada vez mais estereotipado, no qual apenas um olhar já basta para julgar alguém, essa publicação vem com o objetivo de tentar levantar questionamentos sobre isso. Nela, podemos  encontrar pessoas de diferentes estilos, diferentes culturas, diferentes histórias. Indivíduos que não costumam sair em capas de revistas. A partir disso, buscamos entrar um pouco no mundo da pessoa, e tentar representar sua individualidade.",
+    images: [
+      "/projects/1/image1.avif",
+      "/projects/1/image2.avif",
+      "/projects/1/image3.avif",
+    ],
+    ...generateProjectPath(10),
+  },
+  {
+    title: "",
+    category: [""],
+    description: "",
+    images: [
+      "/projects/1/image1.avif",
+      "/projects/1/image2.avif",
+      "/projects/1/image3.avif",
+    ],
+    ...generateProjectPath(11),
+  },
+  {
+    title: "",
+    category: [""],
+    description:
+      "Identidade Visual desenvolvida para uma empresa de treinamentos de alimentos e bebidas, que vai oferecer pacotes de aulas e workshops para os empreendimentos gastronômicos que tenham esta demanda de melhoria do serviço. O foco do aprimoramento do serviço engloba todas as áreas que tocam o cliente, desde o preparo e o visual do alimento ao serviço de atendimento, gerando a fidelização do cliente.\n\nA forma desenvolvida faz referência a ideia de um núcleo (a empresa) onde diversos fatores e agentes se encontram em prol de serem trabalhados interagindo entre si, essa ideia se reforça pelo movimentos existente nas formas da logomarca. Na escolha das cores a intenção foi cada cor representar elementos diferentes mas que fazem parte do mesmo grupo, fazendo referência ao trabalho em equipe.",
+    images: [
+      "/projects/1/image1.avif",
+      "/projects/1/image2.avif",
+      "/projects/1/image3.avif",
+    ],
+    ...generateProjectPath(12),
+  },
 ];
