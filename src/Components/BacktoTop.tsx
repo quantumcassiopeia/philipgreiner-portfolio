@@ -1,5 +1,6 @@
 "use client";
 
+import { clear } from "console";
 import { useEffect, useState } from "react";
 
 export default function BackToTop() {
@@ -11,8 +12,17 @@ export default function BackToTop() {
     };
 
     window.addEventListener("scroll", toggleVisibility);
-    return () => window.removeEventListener("scroll", toggleVisibility);
-  });
+
+    let timer: NodeJS.Timeout;
+    if (isVisible) {
+      timer = setTimeout(() => setIsVisible(false), 3000);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility);
+      clearTimeout(timer);
+    };
+  }, [isVisible]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -20,6 +30,10 @@ export default function BackToTop() {
       behavior: "smooth",
     });
   };
+
+  setTimeout(() => {
+    setIsVisible(false);
+  }, 3000);
 
   return (
     <button
