@@ -1,6 +1,5 @@
 "use client";
 
-import { clear } from "console";
 import { useEffect, useState } from "react";
 
 export default function BackToTop() {
@@ -13,14 +12,14 @@ export default function BackToTop() {
 
     window.addEventListener("scroll", toggleVisibility);
 
-    let timer: NodeJS.Timeout;
+    let timer: NodeJS.Timeout | undefined;
     if (isVisible) {
       timer = setTimeout(() => setIsVisible(false), 3000);
     }
 
     return () => {
       window.removeEventListener("scroll", toggleVisibility);
-      clearTimeout(timer);
+      if (timer) clearTimeout(timer);
     };
   }, [isVisible]);
 
